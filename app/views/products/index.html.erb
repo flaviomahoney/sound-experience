@@ -1,6 +1,6 @@
 <div class="container">
     <% @products.each do |product| %>
-        <p><%= product.short_description %></p>
+        <p><%= link_to product.short_description, product_path(product) %></p>
         <p><%= product.description %></p>
     <% end %>
 </div>
