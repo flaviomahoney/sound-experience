@@ -2,4 +2,7 @@
     <%= link_to 'Edit Product', edit_product_path(@product), class: "btn btn-flat" %>
     <p><%= @product.short_description %></p>
     <p><%= @product.description %></p>
+    <%= link_to product_path(@product), class: "btn btn-red", method: :delete, data: { confirm: 'Are you sure?' } do %>
+        Remove <i class="fas fa-trash"></i>
+    <% end %>
 </div>
