@@ -1,4 +1,5 @@
 <div class="container">
+    <%= link_to 'Edit Product', edit_product_path(@product), class: "btn btn-flat" %>
     <p><%= @product.short_description %></p>
     <p><%= @product.description %></p>
 </div>
