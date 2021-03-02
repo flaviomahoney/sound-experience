@@ -1,16 +1,19 @@
 <div class="container">
     <%= link_to 'Add Product', new_product_path, class: "btn btn-flat" %>
     <div class="cards">
-        <div class="card-trip">
-            <% @products.each do |product| %>
-                <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-                <div class="card-trip-infos">
-                    <div>
-                    <p><%= link_to product.short_description, product_path(product) %></p>
-                    <p><%= product.description %></p>
+        <% @products.each do |product| %>
+            <div class="card-trip">
+            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+                    <div class="card-trip-infos">
+                        <div>
+                        <p><%= link_to product.short_description, product_path(product) %></p>
+                        <p><%= product.description %></p>
+                        </div>
                     </div>
-                </div>
-            <% end %>
-        </div>
-    </div>
+            </div>
+        <% end %>
 </div>
+
+
+
+                
