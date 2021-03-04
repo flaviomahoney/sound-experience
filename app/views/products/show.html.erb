@@ -5,4 +5,11 @@
     <%= link_to product_path(@product), class: "btn btn-red", method: :delete, data: { confirm: 'Are you sure?' } do %>
         Remove <i class="fas fa-trash"></i>
     <% end %>
+     <%# <% if policy(Request).create? %>
+        <%= simple_form_for([ @product, @request ]) do |f| %>
+            <br>
+            <%= f.input :quantity %>
+            <%= f.button :submit %>
+        <% end %>
+    <%# <% end %>
 </div>
